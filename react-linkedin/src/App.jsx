@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Authentication from "./pages/Authentication";
 import Home from "./pages/Home";
+import Signup from "./pages/Authentication/components/Signup";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Authentication />} />
+          <Route path="/Signup" element={<Signup/>} />
           
         </Routes>
       </BrowserRouter>

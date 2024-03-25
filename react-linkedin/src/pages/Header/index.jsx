@@ -1,11 +1,13 @@
 import './style.css';
 import React from "react";
 import logo from "./assets/logo.png";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
 
 const Header=()=>{
+    const navigate = useNavigate();
     
 
     return(
@@ -34,8 +36,8 @@ const Header=()=>{
         
         </ul>
         <div className='Join flex gap-10 space-between'>
-        <button className='register'>Join now</button>
-        <button className='sign-in'>Sign in</button>        
+        <button className='register'onClick={}>Join now</button>
+        <button className='sign-in'onClick={}>Sign in</button>        
         </div>
         </div>
    </div>
