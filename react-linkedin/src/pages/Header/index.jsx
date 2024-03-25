@@ -8,7 +8,13 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 const Header=()=>{
     const navigate = useNavigate();
-    
+    const handleJoinNowClick = () => {
+        navigate("/Signup"); 
+    }
+    const handleSigninClick = () => {
+        navigate("/auth"); 
+    }
+
 
     return(
     <>
@@ -36,8 +42,8 @@ const Header=()=>{
         
         </ul>
         <div className='Join flex gap-10 space-between'>
-        <button className='register'onClick={}>Join now</button>
-        <button className='sign-in'onClick={}>Sign in</button>        
+        <button className='register'onClick={handleJoinNowClick}>Join now</button>
+        <button className='sign-in'onClick={handleSigninClick}>Sign in</button>        
         </div>
         </div>
    </div>

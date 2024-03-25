@@ -36,6 +36,8 @@
     cursor: pointer;
     padding: 12px 24px;
     border-width: 1px;
+    background-color: transparent;
+    color: #0A66C2;
 }
 .sign-in:hover{
     background-color: lightblue;
