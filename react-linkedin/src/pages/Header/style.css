@@ -1,0 +1,55 @@
+.logo img{
+    width: 102px;
+    height: 25.5px;
+    
+}
+
+.navbar{
+    padding: 30px 80px 16px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+}
+
+
+
+.navlist li {
+    font-size: 12px;
+    color: #00000099;
+    padding: 10px;
+    padding: 15px 24px;
+   
+   
+}
+
+
+.Join{
+    font-size: 16px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+    color: #000000BF;
+   
+    
+}
+
+
+.sign-in{
+    border: solid #0A66C2;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 12px 24px;
+    border-width: 1px;
+}
+.sign-in:hover{
+    background-color: lightblue;
+}
+.register{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 24px;
+    padding: 12px 24px;
+
+  
+}
+
+.register:hover{
+    background-color: lightgrey;
+}
