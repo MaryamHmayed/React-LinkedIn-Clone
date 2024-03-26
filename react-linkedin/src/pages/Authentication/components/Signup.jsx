@@ -9,9 +9,21 @@ import logo from "../logo.png";
 
 const Signup=()=>{
     const navigate = useNavigate();
-const handleSigninClick = () => {
+    const handleSigninClick = () => {
     navigate("./Authentication/index.jsx"); 
-}
+    }   
+    const [credentials, setCredentials] = useState({ email: "", password: "" });
+    const [error, setError] = useState("");
+
+
+    useEffect(() => {
+        if (!credentials.email.includes("@")) {
+        setError("Invalid email");
+        } else if (credentials.password.length < 6) {
+        setError("Short password");
+        } else {
+        setError("");
+        }}, [credentials]);
 
 
 

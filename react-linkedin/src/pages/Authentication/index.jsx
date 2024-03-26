@@ -3,7 +3,7 @@ import Signup from "./components/Signup";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "./logo.png";
-
+import axios from "axios";
 
 
 const Authentication=()=>{
@@ -38,28 +38,30 @@ const Authentication=()=>{
         <img src={logo} alt="linkedin logo" />
         </div>
         
-    <div class="container"> 
+    <div className="container"> 
          
        
-        <div class="text"> 
+        <div className="text"> 
             <h1>Sign in</h1> 
             <p>Stay updated on your professional world</p> 
         </div> 
-        <div class="your-input"> 
-            <div class="input"> 
+        <div className="your-input"> 
+            <div className="input"> 
                 <input type="text" name="email" 
                     id="email" required 
                     onChange={(e) => {
                         setCredentials({
                           ...credentials,
                           email: e.target.value,
+                    
                         });
-                      }}
+                      }
+                    }
         
                     /> 
-                <label for="email">Email</label> 
+                <label className="email">email</label> 
             </div> 
-            <div class="input"> 
+            <div className="input"> 
                 <input type="password" name="password" 
                     id="password" required 
                     onChange={(e) => {
@@ -70,18 +72,37 @@ const Authentication=()=>{
                       }}
                     
                     /> 
-                <label for="password"> 
-                    Password 
+                <label className="password"> 
+                    password 
                 </label> 
             </div> 
         </div> 
-        <a href="#" class="forgot-password-link"> 
+        <a  className="forgot-password-link"> 
             Forgot Password? 
         </a> 
-        <button>Sign in</button> 
-        <p class="join-link"> 
+        <button className="login"
+        onClick={async () => {
+            try {
+              const { email, password } = credentials;
+
+              const response = await axios.post(
+                "http://localhost/LinkedIn-clone/back-end/login.php",
+                {
+                  email,
+                  password,
+                }
+              );
+
+              console.log(response.data);
+            } catch (error) {
+              console.error(error);
+            }
+          }}
+
+        >Sign in</button> 
+        <p className="join-link"> 
             New to linkedin? 
-            <span class="join-now"onClick={handleJoinNowClick}> 
+            <span className="join-now"onClick={handleJoinNowClick}> 
                 Join now 
             </span> 
         </p> 

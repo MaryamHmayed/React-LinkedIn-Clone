@@ -19,10 +19,10 @@ if ($email_exists == 0) {
     $query->execute();
 
     $response['status'] = "success";
-    $response['message'] = "another message in success";
+  
 } else {
     $response['status'] = "failed";
-    $response['message'] = "another message in fail";
+   
 }
 
 
